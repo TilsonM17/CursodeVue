@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Controles de cores</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!--
+           Criar um site, bonitinho com cores e tudo mais 
+           que no canto esquedo tenha 3 botões!
+           1 botão vai alterar a cor do fundo e das letras
+           2 botão vai alterar o tamanho das letras
+           3--??????????
+
+    -->
+    <div id="app">
+        <!--navbar-->
+<div class="container-fluid">
+    <nav class="navbar navbar-expand bg-dark">
+        <h3>
+            Contole de cores
+        </h3>
+    </nav>
+</div>  
+
+<!--Corpo do texto-->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 p-5">
+            <p class="h3 text-center" id="color1">Titulo</p>
+ <p id="p1">(browsers), ainda havia muitas restrições,
+como, por exemplo, as incompatibilidades com o sistema 
+operacional e com o navegador  
+ do usuário, falta de plug-ins instalados </p>
+        </div>
+
+
+        <div class="col-md-6 p-5">
+                <p class="h3 text-center" id="color2">Titulo2</p>
+     <p id="p2">(browsers), ainda havia muitas restrições,
+    como, por exemplo, as incompatibilidades com o sistema 
+    operacional e com o navegador  
+     do usuário, falta de plug-ins instalados </p>
+            </div>
+    </div>
+
+
+
+
+<div class="row">
+
+    <div class="col-md-12">
+
+        <p class="h3 text-center" id="color3">Titulo3</p>
+           <p id="p3"> a possibilidade de utilizar o Ajax nos principais na
+            vegadores foi comemorada pelos desenvolvedores, de modo 
+            que o principal beneficiado
+            com a adoção dessa ferramenta será o usuário final.</p> 
+
+
+    </div>
+
+     
+</div>
+
+
+<div class="row p-5">
+
+<div class="col-12 m-4">
+    <button class="btn btn-outline-secondary m-2" v-on:click="alterar">Altera cor</button>
+    <button class="btn btn-outline-primary" @click="tamanho">Alterar Tamanho</button>
+    <button class="btn"></button>
+
+</div>
+</div>
+
+</div>
+
+
+    </div>
+    
+
+    <script src="vue.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+   
+
+    <script>
+       const vm = new Vue({
+           el:'#app',
+           data:{
+                 
+           },
+
+           methods:{
+              alterar: function(){document.getElementsByTagName('nav')[0].style.color = "#ffffff"
+                                  document.getElementById('color1').style.color = "red"
+                                  document.getElementById('color2').style.color = "green"
+                                  document.getElementById('color3').style.color = "black"
+                                  document.getElementById('p1').style.color = "#dada0f"
+                                  document.getElementById('p2').style.color = "#7a2e7a"
+                                  document.getElementById('p3').style.color = "#b9c5bf"
+                                  document.getElementsByTagName('body')[0].style.backgroundColor ="black"
+                                   
+              },
+              tamanho:function(){
+                document.getElementById('color1').style.fontSize = "56px"
+                document.getElementById('color2').style.fontSize = "86px"
+                document.getElementById('color3').style.fontSize = "156px"
+                document.getElementById('p1').style.fontSize = "56px"
+                document.getElementById('p2').style.fontSize = "60px"
+                document.getElementById('p3').style.fontSize = "40px"
+              }
+       
+           } 
+           
+           });
+           
+    
+    </script>
+</body>
+</html>
